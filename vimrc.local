@@ -1,0 +1,6 @@
+" Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+
+imap jk <esc>
+imap kj <esc>
+imap <C-s> <esc>:w<cr>
