@@ -1,6 +1,18 @@
 " Bind `q` to close the buffer for help files
 autocmd Filetype help nnoremap <buffer> q :q<CR>
 
+" Speedup ctrlp
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" Highlight search
+set hlsearch
+
+" Search current word
+nmap <C-d> *
+
 imap jk <esc>
 imap kj <esc>
 imap <C-s> <esc>:w<cr>
