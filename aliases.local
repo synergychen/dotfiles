@@ -1,11 +1,12 @@
 alias sh='vim ~/.zshrc'
 alias szsh='source ~/.zshrc'
-alias la="ls -a"
+alias la='ls -a'
 alias g='git'
-alias router="netstat -nr"
+alias router='netstat -nr'
 alias code='cd ~/Documents/Code'
 alias desk='cd ~/Desktop/'
 alias side='cd ~/Documents/Code/side-projects/'
+alias dotfiles='cd ~/dotfiles'
 alias ip='curl --silent http://checkip.dyndns.org | awk '{print $6}' | cut -f 1 -d "<"'
 
 # install dotfiles
