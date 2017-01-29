@@ -22,5 +22,6 @@ nmap <C-d> *
 imap jk <esc>
 imap kj <esc>
 imap <C-s> <esc>:w<cr>
+imap <C-e> <C-y>,
 
 nnoremap \ :Ag<SPACE>
