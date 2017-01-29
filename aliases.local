@@ -20,3 +20,10 @@ alias show='defaults write com.apple.finder AppleShowAllFiles TRUE'
 alias portal='cd ~/Documents/run/run_portal'
 alias production-to-local='script/dump/production-to-local'
 alias run_es_prod='ssh -L 9203:localhost:9200 -N ubuntu@prod-es-ms-report.rundsp.com'
+
+# tmux
+alias t='tmux'
+alias tkill='tmux kill-session'
+alias tlist='tmux list-sessions'
+alias tnew='tmux new-session -s'
+alias tswitch='tmux switch-client -t'
