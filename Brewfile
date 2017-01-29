@@ -13,6 +13,7 @@ brew 'node'
 brew 'postgresql', restart_service: true
 brew 'python'
 brew 'rbenv'
+brew 'reattach-to-user-namespace'
 brew 'redis', restart_service: true
 brew 'ruby'
 brew 'ruby-build'
