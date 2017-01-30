@@ -23,7 +23,9 @@ alias run_es_prod='ssh -L 9203:localhost:9200 -N ubuntu@prod-es-ms-report.rundsp
 
 # tmux
 alias t='tmux'
+alias ta='tmux attach'
 alias tkill='tmux kill-session'
 alias tlist='tmux list-sessions'
 alias tnew='tmux new-session -s'
 alias tswitch='tmux switch-client -t'
+alias trename='tmux rename-session'
