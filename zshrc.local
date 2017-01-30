@@ -1,6 +1,17 @@
 #   System PATH
 export PATH=/usr/local/bin:$PATH
 
+# ensure always open tmux
+_not_inside_tmux() { [[ -z "$TMUX" ]] }
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}
+
+ensure_tmux_is_running
+
 #   Python PATH
 GREP_OPTIONS="--color=always"
 export GREP_OPTIONS
