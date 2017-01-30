@@ -5,6 +5,7 @@ tap 'homebrew/services'
 tap 'homebrew/versions'
 
 brew 'elasticsearch', restart_service: true
+brew 'fzf'
 brew 'geoip'
 brew 'geos'
 brew 'go'
