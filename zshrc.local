@@ -112,7 +112,7 @@ fi
 #效果超炫的提示符，如需要禁用，注释下面配置
 git_prompt() {
  # ref=$(git symbolic-ref HEAD | cut -d'/' -f3)
- ref=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3) || { echo "$@" ; exit ; }
+ ref=$(git rev-parse --abbrev-ref HEAD 2>/dev/null ) || { echo "$@" ; exit ; }
  echo $ref
 }
 
