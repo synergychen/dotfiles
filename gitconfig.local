@@ -3,6 +3,7 @@
   br = branch
   cb = checkout -b
   cm = commit --verbose
+  cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
   l = log --decorate --graph --oneline --date-order
 [core]
   excludesfile = ~/.gitignore
