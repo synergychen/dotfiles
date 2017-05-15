@@ -19,9 +19,7 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Search current word
-nmap <C-d> *
-
+" Insert mode key mapping
 imap jk <esc>
 imap kj <esc>
 imap <C-s> <esc>:w<cr>
