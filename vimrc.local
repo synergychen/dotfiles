@@ -26,3 +26,9 @@ imap <C-s> <esc>:w<cr>
 imap <C-e> <C-y>,
 
 nnoremap \ :Ag<SPACE>
+
+" UltiSnips setting
+let g:UltiSnipsExpandTrigger="<S-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsEditSplit="vertical"
