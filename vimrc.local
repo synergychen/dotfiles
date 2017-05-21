@@ -38,7 +38,9 @@ inoremap [      []<Left>
 inoremap [<CR>  [<CR>]<Esc>O<Tab>
 inoremap []     []
 inoremap "      ""<Left>
+inoremap ""     ""
 inoremap '      ''<Left>
+inoremap ''     ''
 
 " UltiSnips setting
 let g:UltiSnipsExpandTrigger="<c-e>"
