@@ -20,12 +20,25 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Insert mode key mapping
-imap jk <esc>
-imap kj <esc>
-imap <C-s> <esc>:w<cr>
-imap <C-e> <C-y>,
+imap jk     <esc>
+imap kj     <esc>
+imap <C-s>  <esc>:w<cr>
+imap <C-e>  <C-y>,
 
 nnoremap \ :Ag<SPACE>
+
+" Auto complete pair
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O<Tab>
+inoremap {}     {}
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O<Tab>
+inoremap ()     ()
+inoremap [      []<Left>
+inoremap [<CR>  [<CR>]<Esc>O<Tab>
+inoremap []     []
+inoremap "      ""<Left>
+inoremap '      ''<Left>
 
 " UltiSnips setting
 let g:UltiSnipsExpandTrigger="<c-e>"
