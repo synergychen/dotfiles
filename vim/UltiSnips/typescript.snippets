@@ -1,0 +1,83 @@
+# GENERIC
+
+# console.log
+snippet "(console|cl)" "console.log ..." r
+console.log(${1:"${2:value}"});
+endsnippet
+
+# function
+snippet "(function|func)" "function ..." r
+${1:functionName}(${2:args}): ${3:void} {
+	${4://code...}
+}
+endsnippet
+
+# class
+snippet "(class|cls)" "class ..." r
+export class ${1:ClassName} {
+	constructor(${2:args}) {
+		${3://code...}
+	}}
+}
+endsnippet
+
+# ANGULAR
+
+# import
+snippet import "import ..." b
+import { ${1:module-or-component} } from '${2:path-to-component}';
+${3}
+endsnippet
+
+# subscribe
+snippet "(subscribe|sub)" "subscribe ..." r
+this.${1:serviceName}.${2:serviceFunction}
+	.subscribe(
+		${3:response} => {
+			${4://code...}
+		},
+		error => {
+			console.error(error);
+		}
+	);
+endsnippet
+
+# routerLink
+snippet routerlink "routerLink ..." b
+<a [routerLink]="${1:link}">
+	${2://code...}
+</a>
+endsnippet
+
+# input
+snippet input "input ..." b
+@Input() ${1:property}: ${2:type};
+${3}
+endsnippet
+
+# output
+snippet output "output ..." b
+@Output() ${1:event}: EventEmitter<${2:type}> = new EventEmitter();
+${3}
+endsnippet
+
+# ngIf
+snippet "(ngif|ngIf)" "ngIf ..." r
+<div *ngIf="${1:expression}">
+	${2://code...}
+</div>
+endsnippet
+
+# ngFor
+snippet "(ngfor|ngFor)" "ngFor ..." r
+<div *ngFor="let ${1:single} of ${2:multi}">
+	${3://code...}
+</div>
+endsnippet
+
+# ngModel
+snippet "(ngmodel|ngModel)" "ngModel ..." r
+<div [(ngModel)]="${1:binding}">
+	${2://code...}
+</div>
+endsnippet
