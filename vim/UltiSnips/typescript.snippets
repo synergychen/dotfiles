@@ -66,23 +66,27 @@ snippet output "output ..." b
 ${3}
 endsnippet
 
+# property binding
+snippet "(pro|prop|\[)" "property binding ..." r
+[${1:property}]="${2:value}"${3}
+endsnippet
+
+# event binding
+snippet "(event|\()" "event binding ..." r
+(${1:event})="${2:value}"${3}
+endsnippet
+
 # ngIf
 snippet "(ngif|ngIf)" "ngIf ..." r
-<div *ngIf="${1:expression}">
-	${2://code...}
-</div>
+*ngIf="${1:expression}"${2}
 endsnippet
 
 # ngFor
 snippet "(ngfor|ngFor)" "ngFor ..." r
-<div *ngFor="let ${1:single} of ${2:multi}">
-	${3://code...}
-</div>
+*ngFor="let ${1:single} of ${2:multi}"${3}
 endsnippet
 
 # ngModel
 snippet "(ngmodel|ngModel)" "ngModel ..." r
-<div [(ngModel)]="${1:binding}">
-	${2://code...}
-</div>
+[(ngModel)]="${1:binding}"${2}
 endsnippet
