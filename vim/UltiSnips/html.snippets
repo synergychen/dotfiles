@@ -1,12 +1,12 @@
 # element + id
-snippet "(\w+)\#(\w+)" "element with id" r
+snippet "(\w+)\#(([a-zA-Z0-9]*[-_][a-zA-Z0-9]*)+)" "element with id" r
 <`!p snip.rv = match.group(1)` id="`!p snip.rv = match.group(2)`">
 	${1}
 </`!p snip.rv = match.group(1)`>
 endsnippet
 
 # element + class
-snippet "(\w+)\.(\w+)" "element with class" r
+snippet "(\w+)\.(([a-zA-Z0-9]*[-_][a-zA-Z0-9]*)+)" "element with class" r
 <`!p snip.rv = match.group(1)` class="`!p snip.rv = match.group(2)`">
 	${1}
 </`!p snip.rv = match.group(1)`>
