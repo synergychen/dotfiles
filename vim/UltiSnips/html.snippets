@@ -11,3 +11,35 @@ snippet "(\w+)\.(\w+)" "element with class" r
 	${1}
 </`!p snip.rv = match.group(1)`>
 endsnippet
+
+# routerLink
+snippet routerlink "routerLink ..." b
+<a [routerLink]="${1:link}">
+	${2://code...}
+</a>
+endsnippet
+
+# property binding
+snippet "(pro|prop|\[\])" "property binding ..." r
+[${1:property}]="${2:value}"${3}
+endsnippet
+
+# event binding
+snippet "(event|\(\))" "event binding ..." r
+(${1:event})="${2:value}"${3}
+endsnippet
+
+# ngIf
+snippet "(ngif|ngIf)" "ngIf ..." r
+*ngIf="${1:expression}"${2}
+endsnippet
+
+# ngFor
+snippet "(ngfor|ngFor)" "ngFor ..." r
+*ngFor="let ${1:single} of ${2:multi}"${3}
+endsnippet
+
+# ngModel
+snippet "(ngmodel|ngModel)" "ngModel ..." r
+[(ngModel)]="${1:binding}"${2}
+endsnippet
