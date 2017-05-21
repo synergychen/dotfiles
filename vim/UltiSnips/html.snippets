@@ -1,0 +1,13 @@
+# element + id
+snippet "(\w+)\#(\w+)" "Parenthesis (postfix)" r
+<`!p snip.rv = match.group(1)` id="`!p snip.rv = match.group(2)`">
+	${1:<!-- code -->}
+</`!p snip.rv = match.group(1)`>
+endsnippet
+
+# element + class
+snippet "(\w+)\.(\w+)" "Parenthesis (postfix)" r
+<`!p snip.rv = match.group(1)` class="`!p snip.rv = match.group(2)`">
+	${1:<!-- code -->}
+</`!p snip.rv = match.group(1)`>
+endsnippet
