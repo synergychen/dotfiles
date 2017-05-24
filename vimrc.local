@@ -29,13 +29,13 @@ nnoremap \ :Ag<SPACE>
 
 " Auto complete pair
 inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O<Tab>
+inoremap {<CR>  {<CR>}<Esc>O
 inoremap {}     {}
 inoremap (      ()<Left>
-inoremap (<CR>  (<CR>)<Esc>O<Tab>
+inoremap (<CR>  (<CR>)<Esc>O
 inoremap ()     ()
 inoremap [      []<Left>
-inoremap [<CR>  [<CR>]<Esc>O<Tab>
+inoremap [<CR>  [<CR>]<Esc>O
 inoremap []     []
 inoremap "      ""<Left>
 inoremap ""     ""
