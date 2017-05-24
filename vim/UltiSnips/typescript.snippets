@@ -21,20 +21,26 @@ export class ${1:ClassName} {
 }
 endsnippet
 
+# interface
+snippet "(int|inter|interface)" "interface ..." r
+interface ${1:InterfaceName} {
+	${2://code...}
+}
+endsnippet
+
 # ANGULAR
 
 # import
 snippet import "import ..." b
 import { ${1:module-or-component} } from '${2:path-to-component}';
-${3}
 endsnippet
 
 # subscribe
 snippet "(subscribe|sub)" "subscribe ..." r
-this.${1:serviceName}.${2:serviceFunction}
+this.${1:serviceName}.${2:serviceFunction}(${3:args})
 	.subscribe(
-		${3:response} => {
-			${4://code...}
+		${4:response} => {
+			${5://code...}
 		},
 		error => {
 			console.error(error);
@@ -45,11 +51,9 @@ endsnippet
 # input
 snippet input "input ..." b
 @Input() ${1:property}: ${2:type};
-${3}
 endsnippet
 
 # output
 snippet output "output ..." b
 @Output() ${1:event}: EventEmitter<${2:type}> = new EventEmitter();
-${3}
 endsnippet
