@@ -27,6 +27,11 @@ imap <C-e>  <C-y>,
 
 nnoremap \ :Ag<SPACE>
 
+" Command aliases
+command Html e %<.html
+command Sass e %<.sass
+command Ts e %<.ts
+
 " Auto complete pair
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
