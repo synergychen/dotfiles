@@ -1,25 +1,16 @@
-alias sh='vim ~/.zshrc'
-alias szsh='source ~/.zshrc'
-alias la='ls -a'
-alias g='git'
-alias router='netstat -nr'
 alias code='cd ~/Documents/Code'
 alias desk='cd ~/Desktop/'
-alias side='cd ~/Documents/Code/side-projects/'
 alias dotfiles='cd ~/dotfiles'
-alias ip='curl --silent http://checkip.dyndns.org | awk '{print $6}' | cut -f 1 -d "<"'
+alias g='git'
+alias k='keep'
+alias la='ls -a'
+alias router='netstat -nr'
+alias sh='vim ~/.zshrc'
+alias side='cd ~/Documents/Code/side-projects/'
+alias szsh='source ~/.zshrc'
 
 # install dotfiles
 alias rcup='env RCRC=$HOME/dotfiles/rcrc rcup'
-
-# show or hide suffix
-alias hide='defaults write com.apple.finder AppleShowAllFiles FALSE'
-alias show='defaults write com.apple.finder AppleShowAllFiles TRUE'
-
-# run
-alias portal='cd ~/Documents/run/run_portal'
-alias production-to-local='script/dump/production-to-local'
-alias run_es_prod='ssh -L 9203:localhost:9200 -N ubuntu@prod-es-ms-report.rundsp.com'
 
 # tmux
 alias t='tmux'
@@ -27,5 +18,5 @@ alias ta='tmux attach'
 alias tkill='tmux kill-session'
 alias tlist='tmux list-sessions'
 alias tnew='tmux new-session -s'
-alias tswitch='tmux switch-client -t'
 alias trename='tmux rename-session'
+alias tswitch='tmux switch-client -t'
