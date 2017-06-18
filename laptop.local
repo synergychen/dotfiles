@@ -1,0 +1,33 @@
+#!/bin/sh
+
+brew bundle --file=- <<EOF
+  brew "awscli"
+  brew "jq"
+  brew "nmap"
+  brew "wget"
+
+  cask "1password"
+  cask "alfred"
+  cask "caffeine"
+  cask "cinch"
+  cask "dropbox"
+  cask "gitify"
+  cask "google-chrome"
+  cask "iterm2"
+  cask "keyboard-maestro"
+  cask "postman"
+  cask "skitch"
+  cask "slack"
+EOF
+
+# command manage tool
+pip install keep
+
+fancy_echo "Cleaning up old Homebrew formulae ..."
+brew cleanup
+brew cask cleanup
+
+if [ -r "$HOME/.rcrc" ]; then
+  fancy_echo "Updating dotfiles ..."
+  rcup
+fi
