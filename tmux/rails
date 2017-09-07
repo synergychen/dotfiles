@@ -1,0 +1,6 @@
+# rails session
+new -s "rails" -n "vim"
+new-window -n "git" "rails c"
+split-window -h "tail -f log/development.log"
+split-window -v
+new-window -n "server" "rails s"

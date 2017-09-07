@@ -1,0 +1,5 @@
+# angular session
+new -s "angular" -n "vim"
+new-window -n "git"
+split-window -h
+new-window -n "server" "npm start"
