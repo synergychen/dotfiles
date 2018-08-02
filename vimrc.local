@@ -30,7 +30,7 @@ imap <C-s>  <esc>:w<cr>
 imap <C-e>  <C-y>,
 
 " Global search
-nnoremap \ :Ag<SPACE>
+nnoremap \ :Ag<SPACE>-Q<SPACE>
 nnoremap \\ *N:Ag<SPACE><cword><cr>
 
 " Command aliases
