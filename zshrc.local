@@ -1,6 +1,10 @@
 # System PATH
 export PATH=/usr/local/bin:$PATH
 
+# Alias
+# Rails
+alias krails='kill -9 $(pgrep rails)'
+
 # ensure always open tmux
 _not_inside_tmux() { [[ -z "$TMUX" ]] }
 
