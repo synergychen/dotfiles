@@ -2,25 +2,25 @@
 snippet "(map)" "map" r
 map(${1:e} => {
 	${2://code...}
-});
+})
 endsnippet
 
 # setTimeout
 snippet "(?i)(settimeout)" "setTimeout" r
 setTimeout(() => {
 	${1://code...}
-}, ${2:delay});
+}, ${2:delay})
 endsnippet
 
 # console log
 snippet "(?i)(console)" "console.log" r
-console.log(${1:"${2:message}"});
+console.log(${1:"${2:message}"})
 endsnippet
 
 # gdax
 snippet "(?i)(gdax)" "gdax api" r
 ${1:authedClient}.${2:method}((error, response, data) => {
 	${3:console.log(${4:data})}
-});
+})
 ${5}
 endsnippet
