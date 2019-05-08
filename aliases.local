@@ -8,6 +8,7 @@ alias router='netstat -nr'
 alias sh='vim ~/.zshrc'
 alias side='cd ~/Documents/Code/side-projects/'
 alias szsh='source ~/.zshrc'
+alias python='python3'
 
 # install dotfiles
 alias rcup='env RCRC=$HOME/dotfiles/rcrc rcup'
