@@ -12,12 +12,19 @@ alias python='python3'
 alias pip='pip3'
 
 # github
-currentrepo=$(g config --get remote.upstream.url || g config --get remote.origin.url)
-currentbranch=$(git branch | grep \* | cut -d ' ' -f2)
-currentusername=$(git config --get remote.origin.url | sed -e 's/.*com\/\(.*\)\/.*/\1/')
-currentpr=$(echo "$currentrepo/compare/master...$currentusername:$currentbranch?expand=1" | awk 'gsub(/\.git/, "")')
-alias pr="open $currentpr"
-alias repo="open $currentrepo"
+function opencurrentrepo {
+  local currentrepo=$(g config --get remote.upstream.url || g config --get remote.origin.url)
+  open $currentrepo
+}
+function opencurrentpr {
+  local currentrepo=$(g config --get remote.upstream.url || g config --get remote.origin.url)
+  local currentbranch=$(git branch | grep \* | cut -d ' ' -f2)
+  local currentusername=$(git config --get remote.origin.url | sed -e 's/.*com\/\(.*\)\/.*/\1/')
+  local currentpr=$(echo "$currentrepo/compare/master...$currentusername:$currentbranch?expand=1" | awk 'gsub(/\.git/, "")')
+  open $currentpr
+}
+alias pr=opencurrentpr
+alias repo=opencurrentrepo
 
 # install dotfiles
 alias rcup='env RCRC=$HOME/dotfiles/rcrc rcup'
