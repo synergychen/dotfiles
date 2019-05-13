@@ -1,0 +1,3 @@
+function currentusername {
+  echo $(git config --get remote.origin.url | sed -e 's/.*com\/\(.*\)\/.*/\1/')
+}

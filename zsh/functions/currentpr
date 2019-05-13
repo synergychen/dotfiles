@@ -1,0 +1,3 @@
+function currentpr {
+  echo $(echo "$(currentrepo)/compare/master...$(currentusername):$(currentbranch)?expand=1" | awk 'gsub(/\.git/, "")')
+}

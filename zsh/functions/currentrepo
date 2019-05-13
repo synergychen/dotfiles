@@ -1,0 +1,3 @@
+function currentrepo {
+  echo $(g config --get remote.upstream.url || g config --get remote.origin.url)
+}
