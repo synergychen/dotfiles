@@ -12,17 +12,6 @@ alias python='python3'
 alias pip='pip3'
 
 # github
-function opencurrentrepo {
-  local currentrepo=$(g config --get remote.upstream.url || g config --get remote.origin.url)
-  open $currentrepo
-}
-function opencurrentpr {
-  local currentrepo=$(g config --get remote.upstream.url || g config --get remote.origin.url)
-  local currentbranch=$(git branch | grep \* | cut -d ' ' -f2)
-  local currentusername=$(git config --get remote.origin.url | sed -e 's/.*com\/\(.*\)\/.*/\1/')
-  local currentpr=$(echo "$currentrepo/compare/master...$currentusername:$currentbranch?expand=1" | awk 'gsub(/\.git/, "")')
-  open $currentpr
-}
 alias pr=opencurrentpr
 alias repo=opencurrentrepo
 
