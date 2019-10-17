@@ -1,4 +1,3 @@
-alias code='cd ~/Documents/Code'
 alias desk='cd ~/Desktop/'
 alias dotfiles='cd ~/dotfiles'
 alias g='git'
